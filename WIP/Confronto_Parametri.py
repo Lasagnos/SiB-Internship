@@ -61,3 +61,6 @@ print("="*80 + "\n")
 #     Negative particle radius [m] 5.8600e-06       3.4800e-06            
 #     Positive particle radius [m] 5.2200e-06       5.9000e-07            
 # ================================================================================
+
+
+# Todo - keep the code above but add the visualization from the notebook regarding the new geometry of the sodium cell's visualization
