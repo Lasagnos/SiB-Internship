@@ -2,4 +2,7 @@ Files regarding the internship of Angelo Greco in CNR's Team DAIMON, y.2026, Uni
 
 Currently, the main code can be seen in 'Notebook.ipynb'.
 
-Initial versions of the dataset are stored in 'X_inputs_sodium.npy' and 'Y_inputs_sodium.npy', with 'T_durations_sodium' used for visualization purposes.
+Initial versions of the dataset are stored in 'dataset_sodium.npz' (raw dataset) and 'dataset_sodium_normalized.npz' (normalized dataset). Their fields are:
+* X: input parameters (Current and Diffusivity of Anode/Cathode/Electrolyte)
+* Y: target variables (temporal maps of electrolyte concentration)
+* T: additional file for statistics (discharge duration before cut-off)

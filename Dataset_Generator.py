@@ -11,7 +11,7 @@ param_li = pybamm.ParameterValues("Chen2020")       # "Target geometry" (Commerc
 param_na = pybamm.ParameterValues("Chayambuka2022") # Sodium chemistry (Hard Carbon / NVPF)
 
 # Explicitly set the voltage cut-off for the Sodium cell to 2 Volts
-param_na["Lower voltage cut-off [V]"] = 2
+param_na["Lower voltage cut-off [V]"] = 2   # Default, but we set it explicitly for clarity
 
 # List of macro-geometric parameters to copy from Lithium to Sodium
 # to ensure a rigorous iso-geometric comparison (Sulzer et al., 2021)
@@ -37,12 +37,12 @@ param_na["Negative electrode diffusivity [m2.s-1]"] = "[input]" # Anode (Hard Ca
 param_na["Positive electrode diffusivity [m2.s-1]"] = "[input]" # Cathode (NVPF)
 param_na["Electrolyte diffusivity [m2.s-1]"] = "[input]"        # Liquid Electrolyte
 
-# We want a total of 64 spatial nodes across the x-axis (22 + 20 + 22 = 64)
+# We want a total of 64 spatial nodes across the x-axis (21 + 20 + 21 = 62, plus 2 for the boundaries = 64)
 # This is done because powers of 2 (like 64) are highly optimized for Fast Fourier Transforms in PyTorch
 var_pts = {
-    "x_n": 22,  # negative electrode (anode)
+    "x_n": 21,  # negative electrode (anode)
     "x_s": 20,  # separator
-    "x_p": 22,  # positive electrode (cathode)
+    "x_p": 21,  # positive electrode (cathode)
     "r_n": 10,  # particle radius (internal, not outputted to FNO)
     "r_p": 10   
 }
