@@ -7,5 +7,5 @@ Initial versions of the dataset are stored in 'dataset_sodium.npz' (raw dataset)
 * Y: target variables (temporal maps of electrolyte concentration)
 * T: additional file for statistics (discharge duration before cut-off)
 
-The normalized fields are: X_norm, Y_norm and T_raw, aswell as maintaining a scaling_factors field, which are: [I_min, I_max, Da_min, Da_max, Dc_min, Dc_max, De_min, De_max, Y_min, Y_max].
+Values have been normalized between -1 and 1 (Zero-Centered Deep Learning Standard). The normalized fields are: X_norm, Y_norm and T_raw, aswell as maintaining a scaling_factors field, which are: [I_min, I_max, Da_min, Da_max, Dc_min, Dc_max, De_min, De_max, Y_min, Y_max].
 
