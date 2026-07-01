@@ -54,6 +54,7 @@ var_pts = {
 model = pybamm.sodium_ion.BasicDFN()
 sim = pybamm.Simulation(model, parameter_values=param_na, var_pts=var_pts, solver=pybamm.CasadiSolver(mode="safe")) # 'safe' suggested for full charge/discharge simulations
 t_eval_max = [0, 40000] # Time limit
+sim.solver.set_logging_level("ERROR")   # ignore warnings
 
 # =================================================================
 
