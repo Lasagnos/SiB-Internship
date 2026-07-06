@@ -153,3 +153,17 @@ np.savez_compressed(    # Dataset structure
     T=T_final  # Extra file for stats (discharge durations before cut-off)
 )
 print(f"\nUnified Dataset successfully saved as '{dataset_filename}'.")
+
+
+#  TARGET REACHED: 500 valid simulations extracted!
+
+# ==================================================
+#    DATASET SUCCESSFULLY GENERATED
+# ==================================================
+# Target valid simulations requested: 500
+# Total simulations attempted by LHS: 521
+# Valid stable simulations stored: 500
+# Discarded due to numerical instability: 21
+# X Matrix Shape [N, Parameters]: (500, 4)
+# Y Tensor Shape [N, Space, Time]: (500, 64, 100)
+# ==================================================
